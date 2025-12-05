@@ -1,4 +1,4 @@
-/* color palette from <https://github.com/vuejs/theme> */
+/* color palette - Updated for Red & Teal Theme */
 :root {
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
@@ -8,14 +8,45 @@
   --vt-c-black-soft: #222222;
   --vt-c-black-mute: #282828;
 
-  --vt-c-indigo: #2c3e50;
+  /* Primary Red Colors */
+  --vt-c-red-50: #fef2f2;
+  --vt-c-red-100: #fee2e2;
+  --vt-c-red-200: #fecaca;
+  --vt-c-red-400: #f87171;
+  --vt-c-red-500: #ef4444;
+  --vt-c-red-600: #dc2626;
+  --vt-c-red-700: #b91c1c;
 
+  /* Primary Teal Colors */
+  --vt-c-teal-50: #f0fdfa;
+  --vt-c-teal-100: #ccfbf1;
+  --vt-c-teal-200: #99f6e4;
+  --vt-c-teal-400: #2dd4bf;
+  --vt-c-teal-500: #14b8a6;
+  --vt-c-teal-600: #0d9488;
+  --vt-c-teal-700: #0f766e;
+  --vt-c-teal-900: #134e4a;
+
+  /* Accent Cyan Colors */
+  --vt-c-cyan-400: #22d3ee;
+  --vt-c-cyan-500: #06b6d4;
+
+  /* Gray Scale */
+  --vt-c-gray-50: #f9fafb;
+  --vt-c-gray-100: #f3f4f6;
+  --vt-c-gray-200: #e5e7eb;
+  --vt-c-gray-500: #6b7280;
+  --vt-c-gray-700: #374151;
+  --vt-c-gray-900: #111827;
+
+  /* Dividers */
   --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
   --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
   --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
   --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
+  /* Text Colors */
+  --vt-c-text-light-1: var(--vt-c-gray-900);
   --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
   --vt-c-text-dark-1: var(--vt-c-white);
   --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
@@ -23,41 +54,63 @@
 
 /* semantic color variables for this project */
 :root {
+  /* Backgrounds */
   --color-background: var(--vt-c-white);
   --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
+  --color-background-mute: var(--vt-c-gray-50);
 
+  /* Borders */
   --color-border: var(--vt-c-divider-light-2);
   --color-border-hover: var(--vt-c-divider-light-1);
 
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
+  /* Text */
+  --color-heading: var(--vt-c-gray-900);
+  --color-text: var(--vt-c-gray-700);
 
+  /* Primary Theme Colors */
+  --color-primary: var(--vt-c-teal-600);
+  --color-primary-hover: var(--vt-c-teal-700);
+  --color-primary-light: var(--vt-c-teal-100);
+  
+  /* Secondary Theme Colors */
+  --color-secondary: var(--vt-c-red-500);
+  --color-secondary-hover: var(--vt-c-red-600);
+  --color-secondary-light: var(--vt-c-red-100);
+
+  /* Accent Colors */
+  --color-accent: var(--vt-c-cyan-400);
+
+  /* Section spacing */
   --section-gap: 160px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Dark Mode Backgrounds */
     --color-background: var(--vt-c-black);
     --color-background-soft: var(--vt-c-black-soft);
     --color-background-mute: var(--vt-c-black-mute);
 
+    /* Dark Mode Borders */
     --color-border: var(--vt-c-divider-dark-2);
     --color-border-hover: var(--vt-c-divider-dark-1);
 
+    /* Dark Mode Text */
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);
+
+    /* Dark Mode Theme Colors */
+    --color-primary: var(--vt-c-teal-500);
+    --color-primary-hover: var(--vt-c-teal-400);
+    --color-primary-light: var(--vt-c-teal-900);
+    
+    --color-secondary: var(--vt-c-red-500);
+    --color-secondary-hover: var(--vt-c-red-400);
+    --color-secondary-light: var(--vt-c-red-900);
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-}
-
+/* Body Styles */
 body {
   min-height: 100vh;
   color: var(--color-text);

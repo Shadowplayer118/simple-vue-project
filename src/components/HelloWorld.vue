@@ -1,3 +1,4 @@
+<!-- AboutUs.vue -->
 <script setup lang="ts">
 defineProps<{
   msg: string

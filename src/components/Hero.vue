@@ -1,105 +1,141 @@
+<!-- Hero.vue -->
 <template>
-  <section class="relative w-full min-h-screen flex items-center overflow-hidden" id="home">
+  <section class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden pt-16" id="home">
     
-    <!-- Background Image + Enhanced Gradient Overlay -->
+    <!-- Background Image with Overlay -->
     <div 
-      class="absolute inset-0 bg-cover bg-center scale-105"
+      class="absolute inset-0 bg-cover bg-center"
       :style="{ backgroundImage: `url(${hcBackground})` }"
     >
-      <div class="absolute inset-0 bg-gradient-to-br from-teal-400/70 via-teal-500/50 to-teal-600/30"></div>
+      <div class="absolute inset-0 bg-teal-900 opacity-85"></div>
     </div>
 
-    <!-- Animated accent shapes -->
-    <div class="absolute top-20 right-10 w-72 h-72 bg-teal-400/10 rounded-full blur-3xl animate-pulse"></div>
-    <div class="absolute bottom-20 left-10 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    <!-- Animated Background Elements -->
+    <div class="absolute top-20 right-10 w-72 h-72 bg-teal-400 opacity-20 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-20 left-10 w-96 h-96 bg-cyan-400 opacity-20 rounded-full blur-3xl animate-pulse delay-1000"></div>
 
-    <!-- Content -->
-    <div class="relative container mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between gap-12">
-      
-      <!-- Left side -->
-      <div class="md:w-1/2 text-center md:text-left space-y-6 animate-fade-in">
-        <div class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-2">
-          <span class="text-white/90 text-sm font-medium">🏥 Professional Physical Therapy Services</span>
-        </div>
+    <!-- Content Container -->
+    <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8 max-w-7xl mx-auto">
         
-        <h1 class="text-5xl md:text-7xl font-black text-white leading-tight tracking-tight hero-shadow">
-          Bringing Exceptional Care 
-          <span class="block text-teal-200 mt-2">to Our Community</span>
-        </h1>
-        
-        <p class="text-xl md:text-2xl font-medium text-white/95 leading-relaxed hero-shadow-light max-w-xl">
-          Expert rehabilitation and wellness solutions tailored to your recovery journey at Mangoos Physical Therapy Clinic
-        </p>
-        
-        <div class="flex flex-col sm:flex-row gap-4 pt-4">
-          <a 
-            href="tel:7185850888"
-            class="group inline-flex items-center justify-center bg-white hover:bg-teal-50 text-teal-700 font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-teal-500/50 transition-all duration-300 transform hover:scale-105"
-          >
-            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
-            </svg>
-            Call (718) 585-0888
-          </a>
+        <!-- Left Content -->
+        <div class="lg:w-5/12 text-center lg:text-left space-y-5 animate-fade-in">
           
-          <a 
-            href="#services"
-            class="inline-flex items-center justify-center bg-teal-600/80 backdrop-blur-sm hover:bg-teal-700 text-white font-semibold py-4 px-8 rounded-xl border-2 border-white/30 transition-all duration-300 hover:border-white/60"
-          >
-            Our Services
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-
-      <!-- Right side image with modern card design -->
-      <div class="md:w-1/2 relative animate-slide-in">
-        <div class="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
-          <!-- Decorative border -->
-          <div class="absolute -inset-1 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-2xl blur opacity-75"></div>
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-teal-600 bg-opacity-90 backdrop-blur-md rounded-full border border-teal-400 border-opacity-50 shadow-lg">
+            <span class="text-xl">🏥</span>
+            <span class="text-white text-sm font-bold drop-shadow-md">Professional Physical Therapy Services</span>
+          </div>
           
-          <!-- Image container -->
-          <div class="relative bg-white p-2 rounded-2xl">
-            <img 
-              :src="nurse2"
-              alt="Professional Physical Therapy Care"
-              class="w-full h-auto object-cover rounded-xl"
-            />
+          <!-- Main Heading -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight hero-shadow">
+            Bringing Exceptional Care
+            <span class="block mt-2 text-teal-200">
+              to Our Community
+            </span>
+          </h1>
+          
+          <!-- Subheading -->
+          <p class="text-lg sm:text-xl text-white opacity-95 leading-relaxed max-w-xl mx-auto lg:mx-0 hero-shadow-light">
+            Expert rehabilitation and wellness solutions tailored to your recovery journey
+          </p>
+          
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start pt-3">
+            <a 
+              href="tel:7185850888"
+              class="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 text-teal-700 font-bold py-3 px-6 rounded-xl shadow-2xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              Call (718) 585-0888
+            </a>
             
-            <!-- Stats overlay -->
-            <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md rounded-xl p-4 shadow-lg">
-              <div class="grid grid-cols-3 gap-4 text-center">
-                <div>
-                  <div class="text-2xl font-bold text-teal-700">15+</div>
-                  <div class="text-xs text-gray-600">Years Experience</div>
-                </div>
-                <div class="border-l border-r border-gray-200">
-                  <div class="text-2xl font-bold text-teal-700">500+</div>
-                  <div class="text-xs text-gray-600">Happy Patients</div>
-                </div>
-                <div>
-                  <div class="text-2xl font-bold text-teal-700">100%</div>
-                  <div class="text-xs text-gray-600">Dedicated Care</div>
-                </div>
+            <a 
+              href="#services"
+              class="inline-flex items-center justify-center gap-2 bg-teal-600 bg-opacity-90 hover:bg-teal-700 text-white font-semibold py-3 px-6 rounded-xl border-2 border-white border-opacity-30 hover:border-opacity-60 transition-all duration-300 cursor-pointer"
+            >
+              Our Services
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Content - Image with Organic Blob Shape -->
+        <div class="lg:w-6/12 lg:pl-8 relative max-w-lg animate-slide-in">
+          <!-- Blob Image -->
+          <div class="relative blob-shape overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
+            <!-- Decorative glow -->
+            <div class="absolute -inset-2 bg-linear-to-r from-teal-400 to-cyan-400 blob-shape blur-xl opacity-60"></div>
+            
+            <!-- Image container with blob shape -->
+            <div class="relative bg-white p-2 blob-shape">
+              <img 
+                :src="nurse2"
+                alt="Professional Physical Therapy Care"
+                class="w-full h-auto object-cover blob-inner"
+              />
+            </div>
+          </div>
+
+          <!-- Stats Overlay - Outside but Positioned on Top of Image at Hips -->
+          <div class="absolute top-[75%] left-6 right-1 bg-linear-to-br from-teal-600 to-teal-700 backdrop-blur-md rounded-2xl p-4 shadow-2xl border-2 border-teal-400">
+            <div class="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div class="text-2xl font-bold text-white">15+</div>
+                <div class="text-xs text-teal-100 font-medium">Years</div>
+              </div>
+              <div class="border-l border-r border-teal-400">
+                <div class="text-2xl font-bold text-white">500+</div>
+                <div class="text-xs text-teal-100 font-medium">Patients</div>
+              </div>
+              <div>
+                <div class="text-2xl font-bold text-white">100%</div>
+                <div class="text-xs text-teal-100 font-medium">Care</div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
-
     </div>
-
   </section>
 </template>
 
 <script setup>
-import hcBackground from '@/assets/images/hc-background.png';
-import nurse2 from '@/assets/images/nurse2.png';
+import hcBackground from '@/assets/images/hc-background.png'
+import nurse2 from '@/assets/images/nurse2.png'
 </script>
 
 <style scoped>
+/* Organic Blob Shape */
+.blob-shape {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite;
+}
+
+.blob-inner {
+  border-radius: 58% 42% 32% 68% / 58% 32% 68% 42%;
+}
+
+/* Blob morphing animation */
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
 /* Enhanced text shadows */
 .hero-shadow {
   text-shadow: 
@@ -111,7 +147,7 @@ import nurse2 from '@/assets/images/nurse2.png';
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-/* Animations */
+/* Fade In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -123,6 +159,7 @@ import nurse2 from '@/assets/images/nurse2.png';
   }
 }
 
+/* Slide In Animation */
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -134,6 +171,17 @@ import nurse2 from '@/assets/images/nurse2.png';
   }
 }
 
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Animation Classes */
 .animate-fade-in {
   animation: fadeIn 1s ease-out;
 }
@@ -148,14 +196,5 @@ import nurse2 from '@/assets/images/nurse2.png';
 
 .delay-1000 {
   animation-delay: 1s;
-}
-
-@keyframes pulse {
-  0%, 100% {
-    opacity: 0.3;
-  }
-  50% {
-    opacity: 0.5;
-  }
 }
 </style>
