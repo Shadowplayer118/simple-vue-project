@@ -57,7 +57,8 @@
       </div>
 
       <!-- Second Flex Block: Specialty Services -->
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+      <!-- ✔ Now responsive: text moves below image on small screens -->
+      <div class="flex flex-col-reverse md:flex-row items-center justify-center gap-8">
         
         <!-- Left: Image -->
         <div class="md:w-1/2 flex justify-center">
