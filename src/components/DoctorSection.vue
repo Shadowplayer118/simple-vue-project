@@ -13,7 +13,7 @@
       </div>
 
       <!-- Doctors Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-center">
 
         <!-- Doctor 1 -->
         <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center">

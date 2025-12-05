@@ -1,20 +1,29 @@
 <template>
-  <section class="py-16 bg-white" id="insurance">
-    <div class="container mx-auto px-6 max-w-6xl">
+  <section class="relative py-16" id="insurance">
+    
+    <!-- Background Image + Gradient Overlay -->
+    <div 
+      class="absolute inset-0 bg-cover bg-center"
+      :style="{ backgroundImage: `url(${chiro1})` }"
+    >
+      <div class="absolute inset-0 bg-gradient-to-b from-teal-300/30 via-teal-300/20 to-teal-300/70"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative container mx-auto px-6 max-w-6xl">
 
       <!-- Section Title -->
       <div class="text-center mb-12">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
           Insurance Accepted
         </h2>
-        <p class="text-gray-700 text-lg md:text-xl">
+        <p class="text-teal-800 text-lg md:text-xl">
           We accept a variety of insurance providers for your convenience.
         </p>
       </div>
 
       <!-- Insurance Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center text-center">
-
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 justify-center text-center">
         <!-- Example Insurance 1 -->
         <div class="flex flex-col items-center">
           <img 
@@ -22,7 +31,7 @@
             alt="Insurance 1" 
             class="w-24 h-auto object-contain mb-2"
           />
-          <span class="text-gray-700 font-medium">Insurance 1</span>
+          <span class="text-teal-900 font-medium">Insurance 1</span>
         </div>
 
         <!-- Example Insurance 2 -->
@@ -32,48 +41,10 @@
             alt="Insurance 2" 
             class="w-24 h-auto object-contain mb-2"
           />
-          <span class="text-gray-700 font-medium">Insurance 2</span>
+          <span class="text-teal-900 font-medium">Insurance 2</span>
         </div>
 
-        <!-- Example Insurance 3 -->
-        <div class="flex flex-col items-center">
-          <img 
-            src="https://via.placeholder.com/100x60?text=Insurance+3" 
-            alt="Insurance 3" 
-            class="w-24 h-auto object-contain mb-2"
-          />
-          <span class="text-gray-700 font-medium">Insurance 3</span>
-        </div>
-
-        <!-- Example Insurance 4 -->
-        <div class="flex flex-col items-center">
-          <img 
-            src="https://via.placeholder.com/100x60?text=Insurance+4" 
-            alt="Insurance 4" 
-            class="w-24 h-auto object-contain mb-2"
-          />
-          <span class="text-gray-700 font-medium">Insurance 4</span>
-        </div>
-
-        <!-- Example Insurance 5 -->
-        <div class="flex flex-col items-center">
-          <img 
-            src="https://via.placeholder.com/100x60?text=Insurance+5" 
-            alt="Insurance 5" 
-            class="w-24 h-auto object-contain mb-2"
-          />
-          <span class="text-gray-700 font-medium">Insurance 5</span>
-        </div>
-
-        <!-- Example Insurance 6 -->
-        <div class="flex flex-col items-center">
-          <img 
-            src="https://via.placeholder.com/100x60?text=Insurance+6" 
-            alt="Insurance 6" 
-            class="w-24 h-auto object-contain mb-2"
-          />
-          <span class="text-gray-700 font-medium">Insurance 6</span>
-        </div>
+        <!-- Add more insurance items here -->
 
       </div>
 
@@ -82,6 +53,7 @@
 </template>
 
 <script setup>
+import chiro1 from '@/assets/images/chiro-1.jpg';
 </script>
 
 <style scoped>
